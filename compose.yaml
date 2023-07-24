@@ -1,0 +1,19 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=hotel-db'
+      - 'POSTGRES_PASSWORD=1234'
+      - 'POSTGRES_USER=user'
+    ports:
+      - '5432:5432'
+
+  pgadmin:
+    image: 'dpage/pgadmin:latest'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: wanecoudy4@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 1234
+      PGADMIN_LISTEN_PORT: 5050
+    ports:
+      - '5050:5050'
